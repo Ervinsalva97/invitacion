@@ -1,75 +1,123 @@
+<<!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      Feliz Cumple Ani
-    </title>
-  </head>
+<head>
+	<meta charset="utf-8">
+	<title>Feliz Cumple Ani</title>
+	<link rel="stylesheet" href="card.css">
+</head>
 <style>
-  @import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
-body {
-  background: #eee;
-  font-family: 'Lily Script One';
+ *{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  margin: -150px;
-  float: left;
-  perspective: 500px;
+body{
+  background: #1D1F20;
 }
 
-.content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-
-  transition: transform 1s;
-  transform-style: preserve-3d;
+.wrap{
+	width: 1100px;
+	margin: 50px auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
-.card:hover .content {
-  transform: rotateY( 180deg ) ;
-  transition: transform 0.5s;
+.tarjeta-wrap{
+	margin: 10px;
+	-webkit-perspective: 800;
+	perspective: 800;
 }
 
-.front,
-.back {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: white;
-  line-height: 300px;
-  color: #03446A;
-  text-align: center;
-  font-size: 60px;
-  border-radius: 5px;
-  backface-visibility: hidden;
+.tarjeta{
+	width: 655.5px;
+	height: 465px;
+	background: grey;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: .7s ease;
+	transition: .7s ease;
+	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+
 }
 
-.back {
-  background: #03446A;
-  color: white;
-  transform: rotateY( 180deg );
+.adelante, .atras{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.adelante{
+	width: 100%;
+}
+
+.atras{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+
+	padding: 15px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+
+	text-align: center;
+	color: #fff;
+	font-family: "open sans";
+  background: grey;
+}
+
+.tarjeta-wrap:hover .tarjeta{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.card1{
+	background-image: url(https://github.com/Ervinsalva97/invitacion/blob/25dc4270ec8f38f290435478173b8dd33f3b0955/front.png);
+	background-size: cover;
+}
+.card2{
+	background-image: url(https://github.com/Ervinsalva97/invitacion/blob/25dc4270ec8f38f290435478173b8dd33f3b0955/back.png);
+	background-size: cover;
 }
 </style> 
   
 <body>
   
-<div class="card">
-  <div class="content">
-    <div class="front">
-      <img src="https://raw.githubusercontent.com/Ervinsalva97/invitacion/gh-pages/front.jpg" alt="frente" />
-    </div>
-    <div class="back">
-      Back!
-    </div>
-  </div>
-  </div>
+<div class="wrap">
+		<div class="tarjeta-wrap">
+			<div class="tarjeta">
+				<div class="adelante card1">
+					
+				</div>
+				<div class="atras card2">
+					
+				</div>
+			</div>
+		</div>
+	</div>
   
 </body> 
   
